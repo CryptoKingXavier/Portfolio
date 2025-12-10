@@ -3,7 +3,7 @@ import CodeSnippets from "../../codeSnippets/CodeSnippets";
 
 const showCase = [
     {
-        Snippet: () => <CodeSnippets language={'reactNative'} className={2} />
+        Snippet: () => <CodeSnippets language={'pythonFlask'} className={2} />
     },
     {
         Snippet: () => <CodeSnippets language={'nodeExpress'} className={2} />
@@ -14,9 +14,9 @@ const showCase = [
     {
         Snippet: () => <CodeSnippets language={'reactHooks'} className={2} />
     },
-    {
-        Snippet: () => <CodeSnippets language={'reactNative'} className={2} />
-    },
+    // {
+    //     Snippet: () => <CodeSnippets language={'pythonFlask'} className={2} />
+    // },
 ]
 
 
@@ -36,7 +36,7 @@ export default function CodeShowcase(){
     })
 
     return (
-        <div 
+        <div
             style={{ maxHeight: '80vh', minHeight: '80vh' }}
             className="w-100 h-100 d-flex flex-column justify-content-between"
         >
@@ -44,7 +44,7 @@ export default function CodeShowcase(){
                 <div className="px-4 py-0">
                     { displayShowcase }
                 </div>
-            </div>            
+            </div>
         </div>
     )
 }

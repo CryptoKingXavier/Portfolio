@@ -29,10 +29,11 @@ export default function Navigation(){
     const location = useLocation()
     const navigate = useNavigate()
 
-    const navigateTo = (path) => navigate(path) 
+    const navigateTo = (path) => navigate(path)
     const goHome = () => navigateTo('/')
     const goToAboutMe = () => navigateTo('/about-me')
     const goToProjects = () => navigateTo('/projects')
+    const goToWhatsApp = () => window.open("https://wa.me/message/2G4QW4T3HSL5H1", "_blank")
 
     const [activeNav, setActiveNav] = useState('/')
     const [showOffCanvasNav, setShowOffCanvasNav] = useState()
@@ -40,12 +41,12 @@ export default function Navigation(){
     useEffect(() => {
         if(location.pathname.includes('about-me')){
             setActiveNav('/about-me')
-        
+
         } else if(location.pathname.includes('projects')){
             setActiveNav('/projects')
 
         } else{
-            setActiveNav('/')    
+            setActiveNav('/')
         }
 
     }, [location.pathname])
@@ -61,7 +62,7 @@ export default function Navigation(){
         const goToPath = () => navigateTo(path)
 
         return (
-            <div 
+            <div
                 key={i}
                 onClick={goToPath}
                 className={
@@ -94,13 +95,13 @@ export default function Navigation(){
         <div className='nav-container px-3'>
             <div className='d-flex align-items-center justify-content-between'>
                 <div className='py-3 col-lg-2'>
-                    <p className='m-0 p-0 regular-txt txt-607B96'>benedict olom</p>
+                    <p className='m-0 p-0 regular-txt txt-607B96'>cryptokingxavier</p>
                 </div>
                 <div className='col-lg-7 d-lg-flex d-md-flex d-none justify-content-start'>
                     { displayNavLinks }
                 </div>
                 <div className='d-lg-flex d-md-flex d-none align-items-center justify-content-end col-lg-2'>
-                    <p className={`p-0 py-3 px-4 m-0 pointer regular-txt border-left-light-1E2D3D txt-607B96 nav-link-txt ${activeNav == '/contact-me' && 'text-white'}`}>_contact-me</p>
+                    <p className={`p-0 py-3 px-4 m-0 pointer regular-txt border-left-light-1E2D3D txt-607B96 nav-link-txt ${activeNav == '/contact-me' && 'text-white'}`} onClick={goToWhatsApp}>_contact-me</p>
                 </div>
                 <div className='d-lg-none d-md-none d-block'>
                     <AiOutlineMenu size={23} color='#607B96' onClick={onShowOffCanvasNav} />
@@ -111,7 +112,7 @@ export default function Navigation(){
                 <div className='home-bg'>
                     <div className='nav-container px-3'>
                         <div className='d-flex align-items-center justify-content-between'>
-                            <p className='py-3 m-0 p-0 regular-txt txt-607B96'>benedict olom</p>
+                            <p className='py-3 m-0 p-0 regular-txt txt-607B96'>cryptokingxavier</p>
                             <RxCross2 size={23} color='#607B96' onClick={onHideOffCanvasNav} />
                         </div>
                     </div>
@@ -119,7 +120,7 @@ export default function Navigation(){
                         <p onClick={goHome} className={`p-0 py-3 border-bottom-light-1E2D3D px-3 m-0 regular-txt txt-607B96 nav-link-txt ${activeNav == '/' && 'text-white'}`}>_hello</p>
                         <p onClick={goToAboutMe} className={`p-0 py-3 border-bottom-light-1E2D3D px-3 m-0 regular-txt txt-607B96 nav-link-txt ${activeNav == '/about-me' && 'text-white'}`}>_about-me</p>
                         <p onClick={goToProjects} className={`p-0 py-3 border-bottom-light-1E2D3D px-3 m-0 regular-txt txt-607B96 nav-link-txt ${activeNav == '/projects' && 'text-white'}`}>_projects</p>
-                        <p className={`p-0 py-3 border-bottom-light-1E2D3D px-3 m-0 regular-txt txt-607B96 nav-link-txt ${activeNav == '/contact-me' && 'text-white'}`}>_contact-me</p>                        
+                        <p className={`p-0 py-3 border-bottom-light-1E2D3D px-3 m-0 regular-txt txt-607B96 nav-link-txt ${activeNav == '/contact-me' && 'text-white'}`} onClick={goToWhatsApp}>_contact-me</p>
                     </div>
                 </div>
             </Offcanvas>

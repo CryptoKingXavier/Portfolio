@@ -1,15 +1,15 @@
 import React from "react";
 
 
-export default function CustomSvg({ name, width, height, color }){
-    return (
-        name == 'libraryLogo'
-        ?
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width={width || 32} height={height || 32} viewBox="0 0 300.000000 300.000000"
-            preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill={color || '#000'} stroke="none">
-                    <path d="M797 2989 c-14 -9 -17 -27 -17 -124 l0 -114 -57 24 c-32 12 -91 31
+export default function CustomSvg({ name, width, height, color }) {
+  return (
+    name == 'libraryLogo'
+      ?
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width={width || 32} height={height || 32} viewBox="0 0 300.000000 300.000000"
+        preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill={color || '#000'} stroke="none">
+          <path d="M797 2989 c-14 -9 -17 -27 -17 -124 l0 -114 -57 24 c-32 12 -91 31
                     -132 41 l-74 17 -19 -23 c-18 -22 -19 -41 -16 -327 l3 -304 -25 -5 c-57 -12
                     -236 -77 -252 -91 -10 -9 -18 -22 -18 -30 0 -9 -17 -13 -64 -13 -53 0 -67 -4
                     -90 -25 -14 -13 -26 -31 -26 -39 0 -8 -3 -23 -7 -33 -5 -12 5 -8 30 15 40 34
@@ -61,13 +61,13 @@ export default function CustomSvg({ name, width, height, color }){
                     113 -22 173 -37 l107 -26 0 -34 0 -33 -550 0 c-302 0 -550 2 -550 4 0 2 45 22
                     100 45 110 46 232 78 348 91 87 10 275 5 372 -10z m330 -14 c0 -45 -12 -51
                     -39 -22 l-22 24 22 16 c33 23 39 20 39 -18z"/>
-                    <path d="M6 83 c10 -42 43 -73 78 -73 l30 0 -39 40 c-22 22 -48 45 -58 51 -16
+          <path d="M6 83 c10 -42 43 -73 78 -73 l30 0 -39 40 c-22 22 -48 45 -58 51 -16
                     9 -17 7 -11 -18z"/>
-                    <path d="M2935 60 l-49 -50 30 0 c19 0 38 9 51 23 21 23 39 77 25 77 -4 0 -30
+          <path d="M2935 60 l-49 -50 30 0 c19 0 38 9 51 23 21 23 39 77 25 77 -4 0 -30
                     -22 -57 -50z"/>
-                </g>
-            </svg>
-        :
-            <></>
-    )
+        </g>
+      </svg>
+      :
+      <></>
+  )
 }

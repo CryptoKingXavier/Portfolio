@@ -33,7 +33,7 @@ export default function AboutNav({ onHideOffCanvasNav }){
     useEffect(() => {
         if(pathname.toLowerCase().includes('my-stacks')){
             setActiveNav('my-stacks')
-        
+
         } else if(pathname.toLowerCase().includes('high-school-education')){
             setActiveNav('high-school-education')
 
@@ -52,15 +52,15 @@ export default function AboutNav({ onHideOffCanvasNav }){
 
     return (
         <div
-            style={{ minHeight: '80vh' }} 
+            style={{ minHeight: '80vh' }}
         >
             <CustomScroll>
-                <div 
-                    style={{ minHeight: '80vh' }} 
+                <div
+                    style={{ minHeight: '80vh' }}
                     className='h-100 border-right-light-1E2D3D'
                 >
-                    <div 
-                        onClick={toggleShowPersonalInfo} 
+                    <div
+                        onClick={toggleShowPersonalInfo}
                         className={`${showPersonalInfo && 'mb-3'} pointer border-bottom-light-1E2D3D p-3 d-flex align-items-center`}
                     >
                         {
@@ -75,7 +75,7 @@ export default function AboutNav({ onHideOffCanvasNav }){
 
                     <Collapse in={showPersonalInfo}>
                         <div className='border-bottom-light-1E2D3D px-3'>
-                            <div 
+                            <div
                                 onClick={goToPersonalInfo}
                                 className='pointer d-flex align-items-center mb-3'
                             >
@@ -83,7 +83,7 @@ export default function AboutNav({ onHideOffCanvasNav }){
                                 <FaFileCode size={18} color='#E99287' className='mx-1' />
                                 <p className={`${activeNav == 'personal-info' ? 'txt-FFF' : 'txt-607B96'} regular-txt m-0 p-0 px-1`}>bio</p>
                             </div>
-                            <div 
+                            <div
                                 onClick={goToMyStacks}
                                 className='pointer d-flex align-items-center mb-3'
                             >
@@ -104,27 +104,27 @@ export default function AboutNav({ onHideOffCanvasNav }){
                             </div>
                             <Collapse in={showEducationInfo}>
                                 <div className='px-4'>
-                                    <div 
+                                    <div
                                         onClick={goToHighSchoolEducation}
                                         className='pointer d-flex align-items-center mb-3'
                                     >
                                         <PiStudentBold size={18} color='#81A1C1' />
                                         <p className={`${activeNav == 'high-school-education' ? 'txt-FFF' : 'txt-607B96'} regular-607B96 m-0 p-0 px-1`}>high-school</p>
                                     </div>
-                                    <div 
+                                    <div
                                         onClick={goToCollegeEducation}
                                         className='pointer d-flex align-items-center mb-3'
                                     >
                                         <PiStudentBold size={18} color='#81A1C1' />
                                         <p className={`${activeNav == 'college-education' ? 'txt-FFF' : 'txt-607B96'} regular-607B96 m-0 p-0 px-1`}>university</p>
                                     </div>
-                                </div>                                
+                                </div>
                             </Collapse>
-                        </div>                        
+                        </div>
                     </Collapse>
 
-                    <div 
-                        onClick={toggleShowContactInfo} 
+                    <div
+                        onClick={toggleShowContactInfo}
                         className={`${showContactInfo && 'mb-3'} pointer border-bottom-light-1E2D3D p-3 d-flex align-items-center`}
                     >
                         {
@@ -135,20 +135,20 @@ export default function AboutNav({ onHideOffCanvasNav }){
                                 <FaCaretUp size={18} color='#fff' />
                         }
                         <p className='txt-FFF regular-txt m-0 p-0 px-2'>contacts</p>
-                    </div>   
+                    </div>
 
                     <Collapse in={showContactInfo}>
                         <div className='mx-3'>
                             <div className='d-flex align-items-center mb-3'>
                                 <IoMailOutline size={18} color='#607B96' />
-                                <p className='txt-607B96 regular-txt m-0 p-0 mx-2'>olomufeh @ gmail.com</p>
+                                <p className='txt-607B96 regular-txt m-0 p-0 mx-2'>cryptokingxavier001 @ gmail.com</p>
                             </div>
                             <div className='d-flex align-items-center mb-3'>
                                 <FaPhone size={18} color='#607B96' />
-                                <p className='txt-607B96 regular-txt m-0 p-0 px-2'>+234 9095548706</p>
+                                <p className='txt-607B96 regular-txt m-0 p-0 px-2'>+234 7042367715</p>
                             </div>
                         </div>
-                    </Collapse>                 
+                    </Collapse>
                 </div>
             </CustomScroll>
         </div>

@@ -5,7 +5,7 @@ import { FaGithub, FaGithubAlt } from "react-icons/fa";
 export default function Footer(){
 
 
-    const goToGithubPage = () => window.open('https://github.com/Benny506', '_blank')
+    const goToGithubPage = () => window.open('https://github.com/CryptoKingXavier', '_blank')
 
 
     return (
@@ -20,11 +20,11 @@ export default function Footer(){
                     </div>
                 </div>
 
-                <div 
+                <div
                     onClick={goToGithubPage}
                     className='pointer d-flex border-left-light-1E2D3D px-3 align-items-center justify-content-center'
                 >
-                    <p className='m-0 p-0 px-1 regular-txt txt-607B96'>@Benny506</p>
+                    <p className='m-0 p-0 px-1 regular-txt txt-607B96'>@CryptoKingXavier</p>
                     <FaGithub size={20} color="#607B96" />
                 </div>
             </div>
